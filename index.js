@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors({ origin: "https://weatherfront-xi.vercel.app" }));
