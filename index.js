@@ -5,7 +5,7 @@ const app = express();
 const port = 3001;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "https://weatherfront-xi.vercel.app" }));
 
 // OpenWeather API Key - Replace 'YOUR_API_KEY' with your actual API key
 const apiKey = "eec90fb4a0b54f4444192b7f582ed1e8";
