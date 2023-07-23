@@ -6,11 +6,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use(cors({ origin: "https://weatherfront-xi.vercel.app" }));
+app.use(cors());
 
 // OpenWeather API Key - Replace 'YOUR_API_KEY' with your actual API key
 const apiKey = "eec90fb4a0b54f4444192b7f582ed1e8";
-const weatherAPIBaseUrl = "https://weatherfront-xi.vercel.app/";
+const weatherAPIBaseUrl = "https://api.openweathermap.org/data/2.5/weather";
 const baseUrl="https://reliable-druid-8948db.netlify.app/"
 // Weather endpoint
 app.post(`${baseUrl}`, async (req, res) => {
