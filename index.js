@@ -13,7 +13,7 @@ const apiKey = "eec90fb4a0b54f4444192b7f582ed1e8";
 const weatherAPIBaseUrl = "https://api.openweathermap.org/data/2.5/weather";
 const baseUrl="https://weatherback-seven.vercel.app/"
 // Weather endpoint
-app.post(`${baseUrl}`, async (req, res) => {
+app.post('/', async (req, res) => {
   try {
     const { location } = req.body;
     const weatherData = await getWeatherData(location);
