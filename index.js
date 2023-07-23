@@ -11,9 +11,9 @@ app.use(cors({ origin: "https://weatherfront-xi.vercel.app" }));
 // OpenWeather API Key - Replace 'YOUR_API_KEY' with your actual API key
 const apiKey = "eec90fb4a0b54f4444192b7f582ed1e8";
 const weatherAPIBaseUrl = "https://weatherfront-xi.vercel.app/";
-const baseUrl="https://weatherfront-xi.vercel.app/"
+const baseUrl="https://reliable-druid-8948db.netlify.app/"
 // Weather endpoint
-app.post(`${baseUrl}weather`, async (req, res) => {
+app.post(`${baseUrl}`, async (req, res) => {
   try {
     const { location } = req.body;
     const weatherData = await getWeatherData(location);
